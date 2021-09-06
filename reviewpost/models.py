@@ -6,4 +6,4 @@ from django.contrib.auth.models import User
 
 class ReviewModel(models.Model):
     user = models.CharField(max_length=50)
-    bet = models.IntegerField(default=0)
+    bet = models.IntegerField(default=5000)

@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, logout
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.contrib.auth.decorators import login_required
 from .models import ReviewModel
 from django.shortcuts import render, get_object_or_404
@@ -18,6 +18,7 @@ def signupview(request):
         password_data = request.POST['password_data']
         try:
             user = User.objects.create_user(username_data, '', password_data)
+            db = ReviewModel.objects.create(user=username_data, bet=5000)
         except IntegrityError:
             return render(request, 'signup.html', {'error': 'このユーザーは既に登録されています'})
     else:
@@ -31,9 +32,10 @@ def loginview(request):
         user = authenticate(request, username=username_data, password=password_data)
         if user is not None:
             login(request, user)
-            # object = ReviewModel.objects.all()
-            return render(request, 'index.html', {'user':username_data})
+            object = ReviewModel.objects.filter(user=username_data).values()
+            return render(request, 'index.html', {'object':object})
         else:
+            print('リダイレクト')
             return redirect('login')
     return render(request, 'login.html')
 
@@ -41,7 +43,6 @@ def logoutview(request):
     logout(request)
     return redirect('login')    
 
-class indexview(TemplateView):
-    template_name = 'index.html'
-    model = ReviewModel
-    
+def indexview(request):
+    object_list = ReviewModel.objects.filter(user='tanaka').values()
+    return render(request, 'index.html', {'object_list': object_list})

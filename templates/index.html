@@ -8,13 +8,15 @@
 {% block content%}
 
 <div class='container'>
+  {% for item in object %}
   <div class="card">
-      <h5 class="card-header">{{ user }}さん、こんにちは！</h5>
+      <h5 class="card-header">{{ item.user }}さん、こんにちは！</h5>
       <div class="card-body">
-        <h5 class="card-title">金額：{{ bet }}</h5>
+        <h5 class="card-title">金額：{{ item.bet }}</h5>
+        <h5 class="card-title">id：{{ item.id }}</h5>
         <a href="{% url 'index' %}" class="btn btn-primary">ログアウト</a>
       </div>
     </div>
+    {% endfor %}
   </div>
-
-{% endblock content %}
+  {% endblock content %}
