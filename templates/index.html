@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block header %}
+<link rel='stylesheet' type="text/css" href="{% static 'style.css' %}">
+{% endblock header %}
+
+{% block content%}
+
+<div class='container'>
+  <div class="card">
+      <h5 class="card-header">{{ user }}さん、こんにちは！</h5>
+      <div class="card-body">
+        <h5 class="card-title">金額：{{ bet }}</h5>
+        <a href="{% url 'index' %}" class="btn btn-primary">ログアウト</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
