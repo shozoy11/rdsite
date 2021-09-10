@@ -19,6 +19,8 @@ def signupview(request):
         try:
             user = User.objects.create_user(username_data, '', password_data)
             db = ReviewModel.objects.create(user=username_data, bet=5000)
+            user.save()
+            db.save()            
         except IntegrityError:
             return render(request, 'signup.html', {'error': 'このユーザーは既に登録されています'})
     else:
