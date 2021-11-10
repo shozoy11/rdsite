@@ -6,7 +6,12 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
 
+admin.site.site_title = 'R&D EAユーザー管理サイト'
+admin.site.site_header = 'R&D EAユーザー管理サイト'
+admin.site.index_title = 'メニュー'
+admin.site.unregister(Group)
 
 urlpatterns = [
     path('change-password/', auth_views.PasswordChangeView.as_view(template_name='change-password.html')),
