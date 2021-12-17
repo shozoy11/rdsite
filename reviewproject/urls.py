@@ -8,8 +8,8 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 
-admin.site.site_title = 'R&D EAユーザー管理サイト'
-admin.site.site_header = 'R&D EAユーザー管理サイト'
+admin.site.site_title = 'Saboten HighLow Set ユーザー管理サイト'
+admin.site.site_header = 'Saboten HighLow Set ユーザー管理サイト'
 admin.site.index_title = 'メニュー'
 admin.site.unregister(Group)
 

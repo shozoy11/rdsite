@@ -1,0 +1,86 @@
+#header {
+    background: #178b21;
+    color: white;
+  }
+  
+  h1 {
+    color: #1bb428;
+  }
+
+  div.breadcrumbs {
+    background: #1cbb29;
+  }
+
+  #header a:link, #header a:visited {
+    color: white;
+  }
+  #branding h1, #branding h1 a:visited, #branding h1 a:link {
+    color: white;
+  }
+  
+  .module h2, .module caption, .inline-group h2 {
+    background: #178b21;
+    color: white;
+  }
+  
+  a.section:link, a.section:visited {
+    color: white;
+  }
+
+  .button.default, input[type=submit].default, .submit-row input.default{
+    background: #5bca64;
+  }
+/* #header {
+    background: #2e8bc0;
+    color: white;
+  }
+  
+  h1 {
+    color: #0c2d48;
+  }
+  
+  #header a:link, #header a:visited {
+    color: white;
+  }
+  #branding h1, #branding h1 a:visited, #branding h1 a:link {
+    color: white;
+  }
+  
+  .module h2, .module caption, .inline-group h2 {
+    background: #2e8bc0;
+    color: white;
+  }
+  
+  a.section:link, a.section:visited {
+    color: white;
+  }
+
+  #content-related .module h2{
+    background: #2e8bc0;
+    color: white;
+  }
+
+  #content-related{
+    background: white;
+  }
+
+  .dashboard .module table th{
+    background: white;
+  }
+
+  .dashboard .module table td{
+    background: white;
+  }
+
+  .quiet, a.quiet:link, a.quiet:visited{
+    color: #333;
+  }
+
+  body{
+    background: #e0e0e0;
+  }
+
+  :root{
+    --body-quiet-color:#333;
+    --hairline-color:none;
+  } */

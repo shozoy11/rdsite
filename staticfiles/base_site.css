@@ -1,12 +1,16 @@
 #header {
-    background: #2e8bc0;
+    background: #178b21;
     color: white;
   }
   
   h1 {
-    color: #0c2d48;
+    color: #16b123;
   }
-  
+
+  div.breadcrumbs {
+    background: #1cbb29;
+  }
+
   #header a:link, #header a:visited {
     color: white;
   }
@@ -15,7 +19,7 @@
   }
   
   .module h2, .module caption, .inline-group h2 {
-    background: #2e8bc0;
+    background: #178b21;
     color: white;
   }
   
@@ -23,6 +27,9 @@
     color: white;
   }
 
+  .button.default, input[type=submit].default, .submit-row input.default{
+    background: #49b953;
+  }
 /* #header {
     background: #2e8bc0;
     color: white;

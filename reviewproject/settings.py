@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'django.middleware.security.SecurityMiddleware',
 ]
 
 ROOT_URLCONF = 'reviewproject.urls'
@@ -69,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'reviewproject.wsgi.application'
+# WSGI_APPLICATION = 'reviewproject.wsgi.application'
 
 
 # Database
